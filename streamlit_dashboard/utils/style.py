@@ -6,7 +6,6 @@ PLOTLY_BASE = dict(
     paper_bgcolor="rgba(0,0,0,0)",
     plot_bgcolor="rgba(0,0,0,0)",
     font=dict(family="Inter, system-ui, sans-serif", color="#1E293B", size=12),
-    title_font=dict(color="#64748B", size=13),
 )
 
 LEGEND_STYLE = dict(bgcolor="rgba(255,255,255,0.9)", bordercolor="#E2E8F0", borderwidth=1)
