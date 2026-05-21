@@ -60,7 +60,7 @@ def inject_css():
         color: {C['text']} !important;
         font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif !important;
     }}
-    p, span, div, label {{
+    p, div, label {{
         font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif !important;
     }}
     hr {{
