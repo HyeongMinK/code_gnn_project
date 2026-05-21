@@ -304,9 +304,14 @@ def render_clique(row, tab_key: str, cosine_threshold: float, cols):
             )
 
         node_ids = frozenset(nodes_df["node_id"].tolist())
-        base_edge_count = len(_dedupe_edges(get_clique_edges_filtered(node_ids, 0.4)))
         edges_df = _dedupe_edges(get_clique_edges_filtered(node_ids, cosine_threshold))
         filtered_edge_count = len(edges_df)
+
+        if cols is not None:
+            base_edge_count = len(_dedupe_edges(get_clique_edges_filtered(node_ids, 0.4)))
+            delta = filtered_edge_count - base_edge_count if base_edge_count != filtered_edge_count else None
+        else:
+            delta = None
 
         connected_ids = set(edges_df["src"].tolist()) | set(edges_df["dst"].tolist())
         connected_df = nodes_df[nodes_df["node_id"].isin(connected_ids)]
@@ -315,8 +320,7 @@ def render_clique(row, tab_key: str, cosine_threshold: float, cols):
         m1, m2, m3, m4 = st.columns(4)
         m1.metric("노드 수", int(row["node_count"]))
         m2.metric("사기 비율", f"{fraud_pct:.1%}")
-        delta = filtered_edge_count - base_edge_count
-        m3.metric("엣지 수", f"{filtered_edge_count:,}", delta if delta != 0 else None)
+        m3.metric("엣지 수", f"{filtered_edge_count:,}", delta)
         m4.metric("연결 노드 사기 비율", f"{edge_fraud_ratio:.1%}")
 
         fig = make_network_fig(nodes_df, edges_df)
