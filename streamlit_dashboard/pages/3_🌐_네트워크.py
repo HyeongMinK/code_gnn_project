@@ -60,10 +60,10 @@ st.sidebar.markdown(
     f'🔗 최소 텍스트 유사도</p>',
     unsafe_allow_html=True,
 )
+st.session_state.setdefault("min_cosine_sim", 0.4)
 min_cosine_sim = st.sidebar.select_slider(
     "최소 텍스트 유사도",
     options=[0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
-    value=0.4,
     key="min_cosine_sim",
 )
 
