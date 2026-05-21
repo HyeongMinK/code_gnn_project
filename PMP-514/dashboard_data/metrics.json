@@ -1,0 +1,40 @@
+{
+  "dev": {
+    "f1_binary_1": 0.5767045454545454,
+    "f1_binary_0": 0.9245665105682825,
+    "f1_macro": 0.750635528011414,
+    "auc_gnn": 0.9062703445453926,
+    "gmean_gnn": 0.7813084386948359,
+    "recall_1": 0.67779632721202,
+    "precision_1": 0.5018541409147095,
+    "ap_gnn": 0.6779713836729816,
+    "best_roc_thres": 0.43137016892433167,
+    "best_pr_thres": 0.5552968978881836,
+    "recall_macro": 0.7892125514743369
+  },
+  "test": {
+    "f1_binary_1": 0.5881133379405666,
+    "f1_binary_0": 0.9242019585399974,
+    "f1_macro": 0.7561576482402821,
+    "auc_gnn": 0.9059221607017613,
+    "gmean_gnn": 0.7977190807390663,
+    "recall_1": 0.7103505843071787,
+    "precision_1": 0.5017688679245284,
+    "ap_gnn": 0.68775050390554,
+    "best_roc_thres": 0.4506164491176605,
+    "best_pr_thres": 0.5621261596679688,
+    "recall_macro": 0.8030919588202561
+  },
+  "config": {
+    "epochs": 120,
+    "hid_dim": 40,
+    "n_layer": 1,
+    "dataset": "bridge",
+    "lr": 0.01,
+    "batch_size": 512,
+    "patience": 25,
+    "focal_loss": true,
+    "ranking_alpha": 0.5
+  },
+  "checkpoint": "checkpoints/val_None/LA-SAGE-S/bridge/2026-05-20_13-08-06/best_val_model_None.pth"
+}
