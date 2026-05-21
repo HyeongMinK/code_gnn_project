@@ -38,7 +38,6 @@ OUTCOME_LABELS = {
 def inject_css():
     st.markdown(f"""
     <style>
-    @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
     .stApp {{
         background-color: {C['bg']};
