@@ -1,0 +1,46 @@
+dataset: "bridge"
+
+LA-SAGE-S:
+  add_self_loop: false
+  agg: 'mean'
+  batch_size: 512
+  dataset_seed: 717
+  dropout: 0.2
+  epochs: 120
+  eval_interval: 1
+  flush_seconds: 60
+  force_reload: false
+  full_neighbors: True
+  gpu_id: 0
+  hid_dim: 40
+  homo: false
+  lr: 0.01
+  lr_scheduler: false
+  monitor: 'ap_gnn'
+  multirun: 1
+  n_layer: 1
+  no_dev: false
+  norm_feat: false
+  num_trans: 1
+  num_workers: 8
+  optimizer: 'Adam'
+  patience: 25
+  proj: true
+  reduction: 'mean'
+  relation_agg: 'cat'
+  resi: 0.2
+  run_best: false
+  sampled_neighbors: [-1, -1, -1]
+  sampling_type: 'in'
+  seed: 1234
+  test_each_epoch: false
+  thres: 0.5
+  threshold_moving: true
+  train_size: 0.6
+  val_size: 0.2
+  weight_decay: 0.001
+  weighted_loss: False
+  focal_loss: True
+  focal_gamma: 2.0
+  ranking_alpha: 0.5
+  ranking_margin: 1.0

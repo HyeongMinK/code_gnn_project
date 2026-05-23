@@ -1,0 +1,22 @@
+Command: /usr/bin/python main.py --dataset yelpzip --gpu_id 0
+Start  : 2026-05-14 19:08:47.788700
+======================================================================
+main.py --dataset yelpzip --gpu_id 0                                                      | 2.38s 
+--------------------------------------------------                                        | 2.38s 
+                                                                                          | 2.38s 
+Seed set. 1234                                                                            | 2.39s 
+Traceback (most recent call last):
+  File "/workspace/PMP-514/main.py", line 211, in <module>
+    datasetHelper.load()  # config dataset
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/PMP-514/DataHelper/datasetHelper.py", line 50, in load
+    dataset, label_dict = load_graphs('datasets/{}'.format(self.dataset_name))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/dgl/data/graph_serialize.py", line 186, in load_graphs
+    check_local_file_exists(filename)
+  File "/usr/local/lib/python3.11/dist-packages/dgl/data/graph_serialize.py", line 40, in check_local_file_exists
+    raise DGLError("File {} does not exist.".format(filename))
+dgl._ffi.base.DGLError: File datasets/yelpzip does not exist.
+======================================================================
+End    : 2026-05-14 19:08:52.759579
+Exit   : 1

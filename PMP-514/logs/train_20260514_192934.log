@@ -1,0 +1,445 @@
+Command: /usr/bin/python main.py --dataset bridge --gpu_id 0
+Start  : 2026-05-14 19:29:34.278405
+======================================================================
+main.py --dataset bridge --gpu_id 0                                                       | 2.48s 
+--------------------------------------------------                                        | 2.48s 
+                                                                                          | 2.48s 
+Seed set. 1234                                                                            | 2.52s 
+[Global] Dataset <bridge> Overview
+	 Num Edges 9548722
+	 Num Features     24
+	Entire (fraud/total)   5989 / 46547 
+	Train  (fraud/total)   3593 / 27928 
+	Valid  (fraud/total)   1198 / 9309  
+	Test   (fraud/total)   1198 / 9310  
+
+**************** MODEL CONFIGURATION ****************
+add_self_loop            -->   False
+agg                      -->   mean
+batch_size               -->   512
+best_model_path          -->   checkpoints/
+data_dir                 -->   datasets/
+dataset                  -->   bridge
+dataset_seed             -->   717
+dropout                  -->   0.2
+epochs                   -->   120
+eval_interval            -->   1
+flush_seconds            -->   60
+focal_gamma              -->   2.0
+focal_loss               -->   True
+force_reload             -->   False
+full_neighbors           -->   True
+gpu_id                   -->   0
+hid_dim                  -->   40
+homo                     -->   False
+hyper_file               -->   config/
+log_dir                  -->   logs/
+lr                       -->   0.01
+lr_scheduler             -->   False
+model                    -->   LA-SAGE-S
+model_name               -->   LA-SAGE-S
+monitor                  -->   ap_gnn
+multirun                 -->   1
+n_layer                  -->   1
+no_dev                   -->   False
+norm_feat                -->   False
+num_trans                -->   1
+num_workers              -->   8
+optimizer                -->   Adam
+patience                 -->   25
+proj                     -->   True
+ranking_alpha            -->   0.5
+ranking_margin           -->   1.0
+reduction                -->   mean
+relation_agg             -->   cat
+resi                     -->   0.2
+run_best                 -->   False
+sampled_neighbors        -->   [-1, -1, -1]
+sampling_type            -->   in
+seed                     -->   1234
+test_each_epoch          -->   False
+thres                    -->   0.5
+threshold_moving         -->   True
+train_size               -->   0.6
+val_size                 -->   0.2
+weight_decay             -->   0.001
+weighted_loss            -->   False
+**************** MODEL CONFIGURATION ****************
+--------------------------------------------------                                        | 3.31s 
+		0 th Run                                                                                  | 3.31s 
+--------------------------------------------------                                        | 3.31s 
+
+  0%|          | 0/120 [00:00<?, ?it/s]
+                                       
+[Epoch 0] Loss 1.0425 | Trn ap_gnn 0.4219 | Dev ap_gnn 0.4125 | Best [E0] AUC 0.7976 GMean 0.7019 F1Ma 0.5517 AP 0.4125 RecMa 0.7098
+         └ cls=0.1074  rank=0.5093  rank_term=0.2546
+
+  0%|          | 0/120 [00:36<?, ?it/s]
+  1%|          | 1/120 [00:36<1:13:18, 36.97s/it]
+                                                 
+[Epoch 1] Loss 0.3182 | Trn ap_gnn 0.5388 | Dev ap_gnn 0.5258 | Best [E1] AUC 0.8524 GMean 0.7608 F1Ma 0.6738 AP 0.5258 RecMa 0.7621
+         └ cls=0.0809  rank=0.4485  rank_term=0.2243
+
+  1%|          | 1/120 [01:15<1:13:18, 36.97s/it]
+  2%|▏         | 2/120 [01:15<1:14:49, 38.05s/it]
+                                                 
+[Epoch 2] Loss 0.2714 | Trn ap_gnn 0.5907 | Dev ap_gnn 0.5756 | Best [E2] AUC 0.8741 GMean 0.7804 F1Ma 0.6920 AP 0.5756 RecMa 0.7813
+         └ cls=0.0717  rank=0.3326  rank_term=0.1663
+
+  2%|▏         | 2/120 [01:55<1:14:49, 38.05s/it]
+  2%|▎         | 3/120 [01:55<1:15:23, 38.66s/it]
+                                                 
+[Epoch 3] Loss 0.2385 | Trn ap_gnn 0.6383 | Dev ap_gnn 0.6205 | Best [E3] AUC 0.8869 GMean 0.7727 F1Ma 0.7271 AP 0.6205 RecMa 0.7789
+         └ cls=0.0762  rank=0.3133  rank_term=0.1566
+
+  2%|▎         | 3/120 [02:34<1:15:23, 38.66s/it]
+  3%|▎         | 4/120 [02:34<1:15:15, 38.93s/it]
+                                                 
+[Epoch 4] Loss 0.2194 | Trn ap_gnn 0.6421 | Dev ap_gnn 0.6176 | Best [E3] AUC 0.8869 GMean 0.7727 F1Ma 0.7271 AP 0.6205 RecMa 0.7789
+         └ cls=0.0770  rank=0.3439  rank_term=0.1720
+
+  3%|▎         | 4/120 [03:14<1:15:15, 38.93s/it]
+  4%|▍         | 5/120 [03:14<1:15:02, 39.15s/it]
+                                                 
+[Epoch 5] Loss 0.2081 | Trn ap_gnn 0.6645 | Dev ap_gnn 0.6383 | Best [E5] AUC 0.8967 GMean 0.7760 F1Ma 0.7274 AP 0.6383 RecMa 0.7816
+         └ cls=0.0634  rank=0.2519  rank_term=0.1260
+
+  4%|▍         | 5/120 [03:51<1:15:02, 39.15s/it]
+  5%|▌         | 6/120 [03:51<1:13:23, 38.63s/it]
+                                                 
+[Epoch 6] Loss 0.2013 | Trn ap_gnn 0.6728 | Dev ap_gnn 0.6474 | Best [E6] AUC 0.8974 GMean 0.7770 F1Ma 0.7355 AP 0.6474 RecMa 0.7836
+         └ cls=0.0737  rank=0.3066  rank_term=0.1533
+
+  5%|▌         | 6/120 [04:28<1:13:23, 38.63s/it]
+  6%|▌         | 7/120 [04:28<1:11:22, 37.90s/it]
+                                                 
+[Epoch 7] Loss 0.1950 | Trn ap_gnn 0.6784 | Dev ap_gnn 0.6573 | Best [E7] AUC 0.9005 GMean 0.7862 F1Ma 0.7315 AP 0.6573 RecMa 0.7906
+         └ cls=0.0870  rank=0.3424  rank_term=0.1712
+
+  6%|▌         | 7/120 [05:06<1:11:22, 37.90s/it]
+  7%|▋         | 8/120 [05:06<1:11:20, 38.22s/it]
+                                                 
+[Epoch 8] Loss 0.1996 | Trn ap_gnn 0.6616 | Dev ap_gnn 0.6380 | Best [E7] AUC 0.9005 GMean 0.7862 F1Ma 0.7315 AP 0.6573 RecMa 0.7906
+         └ cls=0.0664  rank=0.2600  rank_term=0.1300
+
+  7%|▋         | 8/120 [05:46<1:11:20, 38.22s/it]
+  8%|▊         | 9/120 [05:46<1:11:22, 38.58s/it]
+                                                 
+[Epoch 9] Loss 0.1947 | Trn ap_gnn 0.6900 | Dev ap_gnn 0.6677 | Best [E9] AUC 0.9012 GMean 0.7512 F1Ma 0.7557 AP 0.6677 RecMa 0.7677
+         └ cls=0.0564  rank=0.2269  rank_term=0.1135
+
+  8%|▊         | 9/120 [06:25<1:11:22, 38.58s/it]
+  8%|▊         | 10/120 [06:25<1:11:16, 38.87s/it]
+                                                  
+[Epoch 10] Loss 0.1961 | Trn ap_gnn 0.6931 | Dev ap_gnn 0.6639 | Best [E9] AUC 0.9012 GMean 0.7512 F1Ma 0.7557 AP 0.6677 RecMa 0.7677
+         └ cls=0.0742  rank=0.3077  rank_term=0.1538
+
+  8%|▊         | 10/120 [07:05<1:11:16, 38.87s/it]
+  9%|▉         | 11/120 [07:05<1:11:07, 39.15s/it]
+                                                  
+[Epoch 11] Loss 0.1868 | Trn ap_gnn 0.6853 | Dev ap_gnn 0.6540 | Best [E9] AUC 0.9012 GMean 0.7512 F1Ma 0.7557 AP 0.6677 RecMa 0.7677
+         └ cls=0.0722  rank=0.3025  rank_term=0.1513
+
+  9%|▉         | 11/120 [07:45<1:11:07, 39.15s/it]
+ 10%|█         | 12/120 [07:45<1:10:36, 39.23s/it]
+                                                  
+[Epoch 12] Loss 0.1903 | Trn ap_gnn 0.6888 | Dev ap_gnn 0.6579 | Best [E9] AUC 0.9012 GMean 0.7512 F1Ma 0.7557 AP 0.6677 RecMa 0.7677
+         └ cls=0.0721  rank=0.2967  rank_term=0.1483
+
+ 10%|█         | 12/120 [08:23<1:10:36, 39.23s/it]
+ 11%|█         | 13/120 [08:23<1:09:40, 39.07s/it]
+                                                  
+[Epoch 13] Loss 0.1920 | Trn ap_gnn 0.6930 | Dev ap_gnn 0.6666 | Best [E9] AUC 0.9012 GMean 0.7512 F1Ma 0.7557 AP 0.6677 RecMa 0.7677
+         └ cls=0.0630  rank=0.1864  rank_term=0.0932
+
+ 11%|█         | 13/120 [09:03<1:09:40, 39.07s/it]
+ 12%|█▏        | 14/120 [09:03<1:09:07, 39.13s/it]
+                                                  
+[Epoch 14] Loss 0.2022 | Trn ap_gnn 0.6541 | Dev ap_gnn 0.6408 | Best [E9] AUC 0.9012 GMean 0.7512 F1Ma 0.7557 AP 0.6677 RecMa 0.7677
+         └ cls=0.0831  rank=0.2787  rank_term=0.1393
+
+ 12%|█▏        | 14/120 [09:42<1:09:07, 39.13s/it]
+ 12%|█▎        | 15/120 [09:42<1:08:25, 39.10s/it]
+                                                  
+[Epoch 15] Loss 0.2386 | Trn ap_gnn 0.6295 | Dev ap_gnn 0.6068 | Best [E9] AUC 0.9012 GMean 0.7512 F1Ma 0.7557 AP 0.6677 RecMa 0.7677
+         └ cls=0.0829  rank=0.2743  rank_term=0.1372
+
+ 12%|█▎        | 15/120 [10:22<1:08:25, 39.10s/it]
+ 13%|█▎        | 16/120 [10:22<1:08:15, 39.38s/it]
+                                                  
+[Epoch 16] Loss 0.2038 | Trn ap_gnn 0.6891 | Dev ap_gnn 0.6578 | Best [E9] AUC 0.9012 GMean 0.7512 F1Ma 0.7557 AP 0.6677 RecMa 0.7677
+         └ cls=0.0737  rank=0.3208  rank_term=0.1604
+
+ 13%|█▎        | 16/120 [11:01<1:08:15, 39.38s/it]
+ 14%|█▍        | 17/120 [11:01<1:07:26, 39.28s/it]
+                                                  
+[Epoch 17] Loss 0.1894 | Trn ap_gnn 0.6896 | Dev ap_gnn 0.6634 | Best [E9] AUC 0.9012 GMean 0.7512 F1Ma 0.7557 AP 0.6677 RecMa 0.7677
+         └ cls=0.0540  rank=0.1789  rank_term=0.0894
+
+ 14%|█▍        | 17/120 [11:39<1:07:26, 39.28s/it]
+ 15%|█▌        | 18/120 [11:39<1:06:32, 39.14s/it]
+                                                  
+[Epoch 18] Loss 0.1893 | Trn ap_gnn 0.6925 | Dev ap_gnn 0.6578 | Best [E9] AUC 0.9012 GMean 0.7512 F1Ma 0.7557 AP 0.6677 RecMa 0.7677
+         └ cls=0.0704  rank=0.2917  rank_term=0.1458
+
+ 15%|█▌        | 18/120 [12:19<1:06:32, 39.14s/it]
+ 16%|█▌        | 19/120 [12:19<1:05:59, 39.20s/it]
+                                                  
+[Epoch 19] Loss 0.1934 | Trn ap_gnn 0.6840 | Dev ap_gnn 0.6517 | Best [E9] AUC 0.9012 GMean 0.7512 F1Ma 0.7557 AP 0.6677 RecMa 0.7677
+         └ cls=0.0576  rank=0.2327  rank_term=0.1163
+
+ 16%|█▌        | 19/120 [12:58<1:05:59, 39.20s/it]
+ 17%|█▋        | 20/120 [12:58<1:05:16, 39.16s/it]
+                                                  
+[Epoch 20] Loss 0.1855 | Trn ap_gnn 0.6981 | Dev ap_gnn 0.6701 | Best [E20] AUC 0.9033 GMean 0.7522 F1Ma 0.7514 AP 0.6701 RecMa 0.7677
+         └ cls=0.0515  rank=0.2426  rank_term=0.1213
+
+ 17%|█▋        | 20/120 [13:38<1:05:16, 39.16s/it]
+ 18%|█▊        | 21/120 [13:38<1:04:53, 39.33s/it]
+                                                  
+[Epoch 21] Loss 0.1937 | Trn ap_gnn 0.6931 | Dev ap_gnn 0.6598 | Best [E20] AUC 0.9033 GMean 0.7522 F1Ma 0.7514 AP 0.6701 RecMa 0.7677
+         └ cls=0.0548  rank=0.2065  rank_term=0.1032
+
+ 18%|█▊        | 21/120 [14:17<1:04:53, 39.33s/it]
+ 18%|█▊        | 22/120 [14:17<1:04:16, 39.36s/it]
+                                                  
+[Epoch 22] Loss 0.1874 | Trn ap_gnn 0.6989 | Dev ap_gnn 0.6625 | Best [E20] AUC 0.9033 GMean 0.7522 F1Ma 0.7514 AP 0.6701 RecMa 0.7677
+         └ cls=0.0560  rank=0.1998  rank_term=0.0999
+
+ 18%|█▊        | 22/120 [14:57<1:04:16, 39.36s/it]
+ 19%|█▉        | 23/120 [14:57<1:03:48, 39.47s/it]
+                                                  
+[Epoch 23] Loss 0.1896 | Trn ap_gnn 0.6915 | Dev ap_gnn 0.6578 | Best [E20] AUC 0.9033 GMean 0.7522 F1Ma 0.7514 AP 0.6701 RecMa 0.7677
+         └ cls=0.0592  rank=0.2444  rank_term=0.1222
+
+ 19%|█▉        | 23/120 [15:34<1:03:48, 39.47s/it]
+ 20%|██        | 24/120 [15:34<1:02:18, 38.95s/it]
+                                                  
+[Epoch 24] Loss 0.1862 | Trn ap_gnn 0.6983 | Dev ap_gnn 0.6620 | Best [E20] AUC 0.9033 GMean 0.7522 F1Ma 0.7514 AP 0.6701 RecMa 0.7677
+         └ cls=0.0581  rank=0.2279  rank_term=0.1140
+
+ 20%|██        | 24/120 [16:14<1:02:18, 38.95s/it]
+ 21%|██        | 25/120 [16:14<1:01:51, 39.07s/it]
+                                                  
+[Epoch 25] Loss 0.1901 | Trn ap_gnn 0.7014 | Dev ap_gnn 0.6734 | Best [E25] AUC 0.9060 GMean 0.7740 F1Ma 0.7521 AP 0.6734 RecMa 0.7838
+         └ cls=0.0613  rank=0.2768  rank_term=0.1384
+
+ 21%|██        | 25/120 [16:53<1:01:51, 39.07s/it]
+ 22%|██▏       | 26/120 [16:53<1:01:26, 39.21s/it]
+                                                  
+[Epoch 26] Loss 0.1815 | Trn ap_gnn 0.7036 | Dev ap_gnn 0.6650 | Best [E25] AUC 0.9060 GMean 0.7740 F1Ma 0.7521 AP 0.6734 RecMa 0.7838
+         └ cls=0.0617  rank=0.2573  rank_term=0.1287
+
+ 22%|██▏       | 26/120 [17:34<1:01:26, 39.21s/it]
+ 22%|██▎       | 27/120 [17:34<1:01:14, 39.51s/it]
+                                                  
+[Epoch 27] Loss 0.1813 | Trn ap_gnn 0.7039 | Dev ap_gnn 0.6736 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0571  rank=0.2168  rank_term=0.1084
+
+ 22%|██▎       | 27/120 [18:13<1:01:14, 39.51s/it]
+ 23%|██▎       | 28/120 [18:13<1:00:31, 39.48s/it]
+                                                  
+[Epoch 28] Loss 0.1833 | Trn ap_gnn 0.6931 | Dev ap_gnn 0.6595 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0644  rank=0.2890  rank_term=0.1445
+
+ 23%|██▎       | 28/120 [18:52<1:00:31, 39.48s/it]
+ 24%|██▍       | 29/120 [18:52<59:30, 39.24s/it]  
+                                                
+[Epoch 29] Loss 0.1895 | Trn ap_gnn 0.6773 | Dev ap_gnn 0.6408 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0661  rank=0.1859  rank_term=0.0930
+
+ 24%|██▍       | 29/120 [19:31<59:30, 39.24s/it]
+ 25%|██▌       | 30/120 [19:31<58:47, 39.20s/it]
+                                                
+[Epoch 30] Loss 0.1951 | Trn ap_gnn 0.6892 | Dev ap_gnn 0.6726 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0734  rank=0.2576  rank_term=0.1288
+
+ 25%|██▌       | 30/120 [20:10<58:47, 39.20s/it]
+ 26%|██▌       | 31/120 [20:10<58:19, 39.32s/it]
+                                                
+[Epoch 31] Loss 0.1980 | Trn ap_gnn 0.6914 | Dev ap_gnn 0.6667 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0599  rank=0.2495  rank_term=0.1247
+
+ 26%|██▌       | 31/120 [20:50<58:19, 39.32s/it]
+ 27%|██▋       | 32/120 [20:50<57:47, 39.41s/it]
+                                                
+[Epoch 32] Loss 0.2021 | Trn ap_gnn 0.6734 | Dev ap_gnn 0.6633 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0737  rank=0.2065  rank_term=0.1033
+
+ 27%|██▋       | 32/120 [21:29<57:47, 39.41s/it]
+ 28%|██▊       | 33/120 [21:29<56:52, 39.23s/it]
+                                                
+[Epoch 33] Loss 0.2113 | Trn ap_gnn 0.6798 | Dev ap_gnn 0.6640 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0795  rank=0.2840  rank_term=0.1420
+
+ 28%|██▊       | 33/120 [22:08<56:52, 39.23s/it]
+ 28%|██▊       | 34/120 [22:08<56:12, 39.22s/it]
+                                                
+[Epoch 34] Loss 0.2051 | Trn ap_gnn 0.6795 | Dev ap_gnn 0.6549 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0797  rank=0.7765  rank_term=0.3883
+
+ 28%|██▊       | 34/120 [22:47<56:12, 39.22s/it]
+ 29%|██▉       | 35/120 [22:47<55:24, 39.11s/it]
+                                                
+[Epoch 35] Loss 0.2090 | Trn ap_gnn 0.6818 | Dev ap_gnn 0.6625 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0533  rank=0.1845  rank_term=0.0923
+
+ 29%|██▉       | 35/120 [23:26<55:24, 39.11s/it]
+ 30%|███       | 36/120 [23:26<54:40, 39.05s/it]
+                                                
+[Epoch 36] Loss 0.1972 | Trn ap_gnn 0.6848 | Dev ap_gnn 0.6655 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0647  rank=0.2569  rank_term=0.1284
+
+ 30%|███       | 36/120 [24:05<54:40, 39.05s/it]
+ 31%|███       | 37/120 [24:05<53:59, 39.04s/it]
+                                                
+[Epoch 37] Loss 0.1915 | Trn ap_gnn 0.7016 | Dev ap_gnn 0.6678 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0583  rank=0.2563  rank_term=0.1282
+
+ 31%|███       | 37/120 [24:44<53:59, 39.04s/it]
+ 32%|███▏      | 38/120 [24:44<53:22, 39.05s/it]
+                                                
+[Epoch 38] Loss 0.1845 | Trn ap_gnn 0.7029 | Dev ap_gnn 0.6689 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0587  rank=0.1995  rank_term=0.0997
+
+ 32%|███▏      | 38/120 [25:22<53:22, 39.05s/it]
+ 32%|███▎      | 39/120 [25:22<52:20, 38.77s/it]
+                                                
+[Epoch 39] Loss 0.1870 | Trn ap_gnn 0.6996 | Dev ap_gnn 0.6727 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0554  rank=0.2136  rank_term=0.1068
+
+ 32%|███▎      | 39/120 [26:01<52:20, 38.77s/it]
+ 33%|███▎      | 40/120 [26:01<51:50, 38.88s/it]
+                                                
+[Epoch 40] Loss 0.1843 | Trn ap_gnn 0.6898 | Dev ap_gnn 0.6591 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0498  rank=0.1860  rank_term=0.0930
+
+ 33%|███▎      | 40/120 [26:41<51:50, 38.88s/it]
+ 34%|███▍      | 41/120 [26:41<51:28, 39.09s/it]
+                                                
+[Epoch 41] Loss 0.1857 | Trn ap_gnn 0.6964 | Dev ap_gnn 0.6634 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0569  rank=0.2233  rank_term=0.1116
+
+ 34%|███▍      | 41/120 [27:19<51:28, 39.09s/it]
+ 35%|███▌      | 42/120 [27:19<50:33, 38.88s/it]
+                                                
+[Epoch 42] Loss 0.1943 | Trn ap_gnn 0.6923 | Dev ap_gnn 0.6572 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0697  rank=0.2874  rank_term=0.1437
+
+ 35%|███▌      | 42/120 [27:58<50:33, 38.88s/it]
+ 36%|███▌      | 43/120 [27:58<49:46, 38.79s/it]
+                                                
+[Epoch 43] Loss 0.1920 | Trn ap_gnn 0.6876 | Dev ap_gnn 0.6561 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0560  rank=0.2444  rank_term=0.1222
+
+ 36%|███▌      | 43/120 [28:38<49:46, 38.79s/it]
+ 37%|███▋      | 44/120 [28:38<49:33, 39.13s/it]
+                                                
+[Epoch 44] Loss 0.1891 | Trn ap_gnn 0.6976 | Dev ap_gnn 0.6610 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0758  rank=0.3283  rank_term=0.1641
+
+ 37%|███▋      | 44/120 [29:16<49:33, 39.13s/it]
+ 38%|███▊      | 45/120 [29:16<48:44, 39.00s/it]
+                                                
+[Epoch 45] Loss 0.1885 | Trn ap_gnn 0.6694 | Dev ap_gnn 0.6321 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0675  rank=0.2798  rank_term=0.1399
+
+ 38%|███▊      | 45/120 [29:55<48:44, 39.00s/it]
+ 38%|███▊      | 46/120 [29:55<47:57, 38.89s/it]
+                                                
+[Epoch 46] Loss 0.1901 | Trn ap_gnn 0.7024 | Dev ap_gnn 0.6631 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0688  rank=0.2958  rank_term=0.1479
+
+ 38%|███▊      | 46/120 [30:31<47:57, 38.89s/it]
+ 39%|███▉      | 47/120 [30:31<46:28, 38.19s/it]
+                                                
+[Epoch 47] Loss 0.1872 | Trn ap_gnn 0.7055 | Dev ap_gnn 0.6725 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0587  rank=0.1889  rank_term=0.0944
+
+ 39%|███▉      | 47/120 [31:10<46:28, 38.19s/it]
+ 40%|████      | 48/120 [31:10<46:06, 38.43s/it]
+                                                
+[Epoch 48] Loss 0.1869 | Trn ap_gnn 0.6776 | Dev ap_gnn 0.6436 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0613  rank=0.1807  rank_term=0.0903
+
+ 40%|████      | 48/120 [31:46<46:06, 38.43s/it]
+ 41%|████      | 49/120 [31:46<44:22, 37.50s/it]
+                                                
+[Epoch 49] Loss 0.1888 | Trn ap_gnn 0.6982 | Dev ap_gnn 0.6641 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0622  rank=0.2020  rank_term=0.1010
+
+ 41%|████      | 49/120 [32:26<44:22, 37.50s/it]
+ 42%|████▏     | 50/120 [32:26<44:33, 38.19s/it]
+                                                
+[Epoch 50] Loss 0.1944 | Trn ap_gnn 0.6851 | Dev ap_gnn 0.6523 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0691  rank=0.2918  rank_term=0.1459
+
+ 42%|████▏     | 50/120 [33:00<44:33, 38.19s/it]
+ 42%|████▎     | 51/120 [33:00<42:30, 36.96s/it]
+                                                
+[Epoch 51] Loss 0.1960 | Trn ap_gnn 0.6909 | Dev ap_gnn 0.6623 | Best [E27] AUC 0.9044 GMean 0.7697 F1Ma 0.7615 AP 0.6736 RecMa 0.7820
+         └ cls=0.0620  rank=0.2245  rank_term=0.1123
+
+ 42%|████▎     | 51/120 [33:39<42:30, 36.96s/it]
+ 43%|████▎     | 52/120 [33:39<42:45, 37.72s/it]
+ 43%|████▎     | 52/120 [34:18<44:51, 39.58s/it]
+best epoch is 27                                                                          | 2061.91s 
+Best Epoch Valid AUC is 0.9044                                                            | 2061.91s 
+best_roc_thres: 0.3931710124015808 
+best_pr_thres: 0.519889235496521
+0 th Run ended. Final Train Loss is tensor(10.3978, device='cuda:0', grad_fn=<AddBackward0>)| 2068.99s 
+0 th Run ended. Best Epoch Valid is {'f1_binary_1': 0.5899005355776588, 'f1_binary_0': 0.9330167458135467, 'f1_macro': 0.7614586406956028, 'auc_gnn': 0.9044216216193967, 'gmean_gnn': 0.769671795312801, 'recall_1': 0.6435726210350584, 'precision_1': 0.5444915254237288, 'ap_gnn': 0.673557514336068, 'best_roc_thres': 0.393171, 'best_pr_thres': 0.51988924, 'recall_macro': 0.782025491876178}| 2068.99s 
+0 th Run ended. Best Epoch Test is {'f1_binary_1': 0.6075247524752475, 'f1_binary_0': 0.9384280832556695, 'f1_macro': 0.7729764178654586, 'auc_gnn': 0.904716533225988, 'gmean_gnn': 0.7720337613021763, 'recall_1': 0.6402337228714524, 'precision_1': 0.5779954785229842, 'ap_gnn': 0.6922051488025648, 'best_roc_thres': 0.37988505, 'best_pr_thres': 0.5714942, 'recall_macro': 0.7856000961497301}| 2068.99s 
+--------------------------------------------------                                        | 2068.99s 
+checkpoints/val_None/LA-SAGE-S/bridge/2026-05-14_19-29-39/best_val_model_None.pth
+[0.90442]
+auc_gnn of Dev : [0.9044]                                                                 | 2069.02s 
+auc_gnn of Dev : avg / std = 0.9044 / nan                                                 | 2069.02s 
+ap_gnn of Dev : [0.6736]                                                                  | 2069.02s 
+ap_gnn of Dev : avg / std = 0.6736 / nan                                                  | 2069.02s 
+gmean_gnn of Dev : [0.7697]                                                               | 2069.02s 
+gmean_gnn of Dev : avg / std = 0.7697 / nan                                               | 2069.02s 
+recall_macro of Dev : [0.782]                                                             | 2069.02s 
+recall_macro of Dev : avg / std = 0.7820 / nan                                            | 2069.02s 
+f1_macro of Dev : [0.7615]                                                                | 2069.02s 
+f1_macro of Dev : avg / std = 0.7615 / nan                                                | 2069.02s 
+best_roc_thres of Dev : [0.3932]                                                          | 2069.02s 
+best_roc_thres of Dev : avg / std = 0.3932 / nan                                          | 2069.02s 
+best_pr_thres of Dev : [0.5199]                                                           | 2069.02s 
+best_pr_thres of Dev : avg / std = 0.5199 / nan                                           | 2069.02s 
+f1_binary_1 of Dev : [0.5899]                                                             | 2069.02s 
+f1_binary_1 of Dev : avg / std = 0.5899 / nan                                             | 2069.02s 
+f1_binary_0 of Dev : [0.933]                                                              | 2069.02s 
+f1_binary_0 of Dev : avg / std = 0.9330 / nan                                             | 2069.02s 
+recall_1 of Dev : [0.6436]                                                                | 2069.02s 
+recall_1 of Dev : avg / std = 0.6436 / nan                                                | 2069.02s 
+precision_1 of Dev : [0.5445]                                                             | 2069.02s 
+precision_1 of Dev : avg / std = 0.5445 / nan                                             | 2069.02s 
+                                                                                          | 2069.02s 
+[0.90472]
+auc_gnn of Test : [0.9047]                                                                | 2069.02s 
+auc_gnn of Test : avg / std = 0.9047 / nan                                                | 2069.02s 
+ap_gnn of Test : [0.6922]                                                                 | 2069.02s 
+ap_gnn of Test : avg / std = 0.6922 / nan                                                 | 2069.02s 
+gmean_gnn of Test : [0.772]                                                               | 2069.02s 
+gmean_gnn of Test : avg / std = 0.7720 / nan                                              | 2069.02s 
+recall_macro of Test : [0.7856]                                                           | 2069.02s 
+recall_macro of Test : avg / std = 0.7856 / nan                                           | 2069.02s 
+f1_macro of Test : [0.773]                                                                | 2069.02s 
+f1_macro of Test : avg / std = 0.7730 / nan                                               | 2069.02s 
+best_roc_thres of Test : [0.3799]                                                         | 2069.02s 
+best_roc_thres of Test : avg / std = 0.3799 / nan                                         | 2069.02s 
+best_pr_thres of Test : [0.5715]                                                          | 2069.02s 
+best_pr_thres of Test : avg / std = 0.5715 / nan                                          | 2069.02s 
+f1_binary_1 of Test : [0.6075]                                                            | 2069.02s 
+f1_binary_1 of Test : avg / std = 0.6075 / nan                                            | 2069.02s 
+f1_binary_0 of Test : [0.9384]                                                            | 2069.02s 
+f1_binary_0 of Test : avg / std = 0.9384 / nan                                            | 2069.02s 
+recall_1 of Test : [0.6402]                                                               | 2069.02s 
+recall_1 of Test : avg / std = 0.6402 / nan                                               | 2069.02s 
+precision_1 of Test : [0.578]                                                             | 2069.02s 
+precision_1 of Test : avg / std = 0.5780 / nan                                            | 2069.02s 
+                                                                                          | 2069.02s 
+======================================================================
+End    : 2026-05-14 20:04:06.654287
+Exit   : 0

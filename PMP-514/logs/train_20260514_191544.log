@@ -1,0 +1,71 @@
+Command: /usr/bin/python main.py --dataset bridge --gpu_id 0
+Start  : 2026-05-14 19:15:44.635757
+======================================================================
+main.py --dataset bridge --gpu_id 0                                                       | 2.31s 
+--------------------------------------------------                                        | 2.31s 
+                                                                                          | 2.31s 
+Seed set. 1234                                                                            | 2.32s 
+[Global] Dataset <bridge> Overview
+	 Num Edges 9548722
+	 Num Features     24
+	Entire (fraud/total)   5989 / 46547 
+	Train  (fraud/total)   3593 / 27928 
+	Valid  (fraud/total)   1198 / 9309  
+	Test   (fraud/total)   1198 / 9310  
+
+**************** MODEL CONFIGURATION ****************
+add_self_loop            -->   False
+agg                      -->   mean
+batch_size               -->   512
+best_model_path          -->   checkpoints/
+data_dir                 -->   datasets/
+dataset                  -->   bridge
+dataset_seed             -->   717
+dropout                  -->   0.2
+epochs                   -->   500
+eval_interval            -->   1
+flush_seconds            -->   60
+focal_gamma              -->   2.0
+focal_loss               -->   True
+force_reload             -->   False
+full_neighbors           -->   True
+gpu_id                   -->   0
+hid_dim                  -->   40
+homo                     -->   False
+hyper_file               -->   config/
+log_dir                  -->   logs/
+lr                       -->   0.01
+lr_scheduler             -->   False
+model                    -->   LA-SAGE-S
+model_name               -->   LA-SAGE-S
+monitor                  -->   ap_gnn
+multirun                 -->   1
+n_layer                  -->   1
+no_dev                   -->   False
+norm_feat                -->   False
+num_trans                -->   1
+num_workers              -->   8
+optimizer                -->   Adam
+patience                 -->   100
+proj                     -->   True
+ranking_alpha            -->   0.5
+ranking_margin           -->   1.0
+reduction                -->   mean
+relation_agg             -->   cat
+resi                     -->   0.2
+run_best                 -->   False
+sampled_neighbors        -->   [-1, -1, -1]
+sampling_type            -->   in
+seed                     -->   1234
+test_each_epoch          -->   False
+thres                    -->   0.5
+threshold_moving         -->   True
+train_size               -->   0.6
+val_size                 -->   0.2
+weight_decay             -->   0.001
+weighted_loss            -->   False
+**************** MODEL CONFIGURATION ****************
+--------------------------------------------------                                        | 2.70s 
+		0 th Run                                                                                  | 2.70s 
+--------------------------------------------------                                        | 2.70s 
+

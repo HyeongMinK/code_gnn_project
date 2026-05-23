@@ -1,0 +1,62 @@
+absl-py==2.4.0
+# install: pip install cupy-cuda12x
+cupy-cuda12x==13.3.0
+certifi==2026.4.22
+charset-normalizer==3.4.7
+cmake==3.25.0
+contourpy==1.3.2
+cycler==0.12.1
+# install: pip install dgl==1.1.3+cu121 -f https://data.dgl.ai/wheels/cu121/repo.html
+dgl==1.1.3+cu121
+filelock==3.25.2
+fonttools==4.62.1
+grpcio==1.80.0
+idna==3.14
+imbalanced-learn==0.10.1
+Jinja2==3.1.6
+joblib==1.5.3
+kiwisolver==1.5.0
+lit==15.0.7
+littleutils==0.2.4
+Markdown==3.10.2
+MarkupSafe==3.0.3
+matplotlib==3.7.0
+mpmath==1.3.0
+networkx==3.6.1
+numpy==1.23.5
+ogb==1.3.6
+outdated==0.2.2
+packaging==26.2
+pandas==2.3.3
+pillow==12.2.0
+protobuf==7.34.1
+psutil==7.2.2
+pyparsing==3.3.2
+python-dateutil==2.9.0.post0
+pytz==2026.2
+PyYAML==6.0.1
+requests==2.33.1
+scikit-learn==1.7.2
+scipy==1.10.0
+# install: pip install sentence-transformers==2.7.0 transformers==4.41.0
+sentence-transformers==2.7.0
+six==1.17.0
+tokenizers==0.19.1
+transformers==4.41.0
+sympy==1.14.0
+tensorboard==2.20.0
+tensorboard-data-server==0.7.2
+threadpoolctl==3.6.0
+# install: pip install torch==2.0.1+cu118 --index-url https://download.pytorch.org/whl/cu118
+torch==2.0.1+cu118
+# install: pip install torch-scatter==2.1.1+pt20cu118 torch-sparse==0.6.17+pt20cu118 -f https://data.pyg.org/whl/torch-2.0.1+cu118.html
+torch-scatter==2.1.1+pt20cu118
+torch-sparse==0.6.17+pt20cu118
+torch_geometric==2.3.1
+torchmetrics==0.11.4
+tqdm==4.67.3
+triton==2.0.0
+typing_extensions==4.15.0
+tzdata==2026.2
+urllib3==2.7.0
+Werkzeug==3.1.8

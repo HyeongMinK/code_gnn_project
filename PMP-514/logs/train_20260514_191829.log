@@ -1,0 +1,149 @@
+Command: /usr/bin/python main.py --dataset bridge --gpu_id 0
+Start  : 2026-05-14 19:18:29.561299
+======================================================================
+main.py --dataset bridge --gpu_id 0                                                       | 2.52s 
+--------------------------------------------------                                        | 2.52s 
+                                                                                          | 2.52s 
+Seed set. 1234                                                                            | 2.54s 
+[Global] Dataset <bridge> Overview
+	 Num Edges 9548722
+	 Num Features     24
+	Entire (fraud/total)   5989 / 46547 
+	Train  (fraud/total)   3593 / 27928 
+	Valid  (fraud/total)   1198 / 9309  
+	Test   (fraud/total)   1198 / 9310  
+
+**************** MODEL CONFIGURATION ****************
+add_self_loop            -->   False
+agg                      -->   mean
+batch_size               -->   512
+best_model_path          -->   checkpoints/
+data_dir                 -->   datasets/
+dataset                  -->   bridge
+dataset_seed             -->   717
+dropout                  -->   0.2
+epochs                   -->   120
+eval_interval            -->   1
+flush_seconds            -->   60
+focal_gamma              -->   2.0
+focal_loss               -->   True
+force_reload             -->   False
+full_neighbors           -->   True
+gpu_id                   -->   0
+hid_dim                  -->   40
+homo                     -->   False
+hyper_file               -->   config/
+log_dir                  -->   logs/
+lr                       -->   0.01
+lr_scheduler             -->   False
+model                    -->   LA-SAGE-S
+model_name               -->   LA-SAGE-S
+monitor                  -->   ap_gnn
+multirun                 -->   1
+n_layer                  -->   1
+no_dev                   -->   False
+norm_feat                -->   False
+num_trans                -->   1
+num_workers              -->   8
+optimizer                -->   Adam
+patience                 -->   25
+proj                     -->   True
+ranking_alpha            -->   0.5
+ranking_margin           -->   1.0
+reduction                -->   mean
+relation_agg             -->   cat
+resi                     -->   0.2
+run_best                 -->   False
+sampled_neighbors        -->   [-1, -1, -1]
+sampling_type            -->   in
+seed                     -->   1234
+test_each_epoch          -->   False
+thres                    -->   0.5
+threshold_moving         -->   True
+train_size               -->   0.6
+val_size                 -->   0.2
+weight_decay             -->   0.001
+weighted_loss            -->   False
+**************** MODEL CONFIGURATION ****************
+--------------------------------------------------                                        | 2.93s 
+		0 th Run                                                                                  | 2.93s 
+--------------------------------------------------                                        | 2.93s 
+
+  0%|          | 0/120 [00:00<?, ?it/s]
+                                       
+[Epoch 0] Loss 1.0438 | Trn ap_gnn 0.4322 | Dev ap_gnn 0.4209 | Best [E0] AUC 0.8026 GMean 0.7014 F1Ma 0.5463 AP 0.4209 RecMa 0.7119
+         └ cls=0.1026  rank=0.4992  rank_term=0.2496
+
+  0%|          | 0/120 [00:37<?, ?it/s]
+  1%|          | 1/120 [00:37<1:14:34, 37.60s/it]
+                                                 
+[Epoch 1] Loss 0.3183 | Trn ap_gnn 0.5302 | Dev ap_gnn 0.5149 | Best [E1] AUC 0.8478 GMean 0.7616 F1Ma 0.6455 AP 0.5149 RecMa 0.7616
+         └ cls=0.0821  rank=0.4576  rank_term=0.2288
+
+  1%|          | 1/120 [01:16<1:14:34, 37.60s/it]
+  2%|▏         | 2/120 [01:16<1:15:43, 38.51s/it]
+                                                 
+[Epoch 2] Loss 0.2743 | Trn ap_gnn 0.5902 | Dev ap_gnn 0.5709 | Best [E2] AUC 0.8721 GMean 0.7784 F1Ma 0.6784 AP 0.5709 RecMa 0.7787
+         └ cls=0.0679  rank=0.3151  rank_term=0.1575
+
+  2%|▏         | 2/120 [01:56<1:15:43, 38.51s/it]
+  2%|▎         | 3/120 [01:56<1:16:36, 39.28s/it]
+                                                 
+[Epoch 3] Loss 0.2388 | Trn ap_gnn 0.6319 | Dev ap_gnn 0.6142 | Best [E3] AUC 0.8869 GMean 0.7731 F1Ma 0.7256 AP 0.6142 RecMa 0.7791
+         └ cls=0.0763  rank=0.3117  rank_term=0.1558
+
+  2%|▎         | 3/120 [02:35<1:16:36, 39.28s/it]
+  3%|▎         | 4/120 [02:35<1:15:03, 38.82s/it]
+                                                 
+[Epoch 4] Loss 0.2201 | Trn ap_gnn 0.6462 | Dev ap_gnn 0.6210 | Best [E4] AUC 0.8930 GMean 0.7684 F1Ma 0.7315 AP 0.6210 RecMa 0.7763
+         └ cls=0.0733  rank=0.2959  rank_term=0.1480
+
+  3%|▎         | 4/120 [03:14<1:15:03, 38.82s/it]
+  4%|▍         | 5/120 [03:14<1:14:47, 39.03s/it]
+                                                 
+[Epoch 5] Loss 0.2190 | Trn ap_gnn 0.6551 | Dev ap_gnn 0.6290 | Best [E5] AUC 0.8948 GMean 0.7856 F1Ma 0.7270 AP 0.6290 RecMa 0.7894
+         └ cls=0.0665  rank=0.2605  rank_term=0.1303
+
+  4%|▍         | 5/120 [03:52<1:14:47, 39.03s/it]
+  5%|▌         | 6/120 [03:52<1:13:16, 38.57s/it]
+                                                 
+[Epoch 6] Loss 0.2016 | Trn ap_gnn 0.6715 | Dev ap_gnn 0.6462 | Best [E6] AUC 0.8976 GMean 0.7865 F1Ma 0.7277 AP 0.6462 RecMa 0.7903
+         └ cls=0.0801  rank=0.3284  rank_term=0.1642
+
+  5%|▌         | 6/120 [04:30<1:13:16, 38.57s/it]
+  6%|▌         | 7/120 [04:30<1:12:39, 38.58s/it]
+                                                 
+[Epoch 7] Loss 0.1946 | Trn ap_gnn 0.6794 | Dev ap_gnn 0.6528 | Best [E7] AUC 0.9006 GMean 0.7920 F1Ma 0.7314 AP 0.6528 RecMa 0.7954
+         └ cls=0.0762  rank=0.3170  rank_term=0.1585
+
+  6%|▌         | 7/120 [05:09<1:12:39, 38.58s/it]
+  7%|▋         | 8/120 [05:09<1:12:22, 38.77s/it]
+                                                 
+[Epoch 8] Loss 0.1985 | Trn ap_gnn 0.6780 | Dev ap_gnn 0.6507 | Best [E7] AUC 0.9006 GMean 0.7920 F1Ma 0.7314 AP 0.6528 RecMa 0.7954
+         └ cls=0.0709  rank=0.2394  rank_term=0.1197
+
+  7%|▋         | 8/120 [05:50<1:12:22, 38.77s/it]
+  8%|▊         | 9/120 [05:50<1:12:47, 39.34s/it]
+                                                 
+[Epoch 9] Loss 0.1945 | Trn ap_gnn 0.6863 | Dev ap_gnn 0.6562 | Best [E9] AUC 0.8987 GMean 0.7527 F1Ma 0.7450 AP 0.6562 RecMa 0.7669
+         └ cls=0.0580  rank=0.2456  rank_term=0.1228
+
+  8%|▊         | 9/120 [06:30<1:12:47, 39.34s/it]
+  8%|▊         | 10/120 [06:30<1:12:26, 39.52s/it]
+                                                  
+[Epoch 10] Loss 0.1950 | Trn ap_gnn 0.6955 | Dev ap_gnn 0.6705 | Best [E10] AUC 0.9055 GMean 0.7460 F1Ma 0.7574 AP 0.6705 RecMa 0.7644
+         └ cls=0.0772  rank=0.3492  rank_term=0.1746
+
+  8%|▊         | 10/120 [07:25<1:12:26, 39.52s/it]
+  9%|▉         | 11/120 [07:25<1:20:28, 44.30s/it]
+                                                  
+[Epoch 11] Loss 0.1868 | Trn ap_gnn 0.6963 | Dev ap_gnn 0.6677 | Best [E10] AUC 0.9055 GMean 0.7460 F1Ma 0.7574 AP 0.6705 RecMa 0.7644
+         └ cls=0.0724  rank=0.3044  rank_term=0.1522
+
+  9%|▉         | 11/120 [08:32<1:20:28, 44.30s/it]
+ 10%|█         | 12/120 [08:32<1:31:54, 51.06s/it]
+                                                  
+[Epoch 12] Loss 0.1999 | Trn ap_gnn 0.6323 | Dev ap_gnn 0.6150 | Best [E10] AUC 0.9055 GMean 0.7460 F1Ma 0.7574 AP 0.6705 RecMa 0.7644
+         └ cls=0.0793  rank=0.3315  rank_term=0.1658
+
+ 10%|█         | 12/120 [09:35<1:31:54, 51.06s/it]

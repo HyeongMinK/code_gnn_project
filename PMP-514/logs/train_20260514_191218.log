@@ -1,0 +1,17 @@
+Command: /usr/bin/python main.py --dataset bridge --gpu_id 0
+Start  : 2026-05-14 19:12:18.755917
+======================================================================
+main.py --dataset bridge --gpu_id 0                                                       | 2.47s 
+--------------------------------------------------                                        | 2.47s 
+                                                                                          | 2.47s 
+Traceback (most recent call last):
+  File "/workspace/PMP-514/main.py", line 197, in <module>
+    config = get_config(config_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/PMP-514/utils/utils.py", line 17, in get_config
+    with open(config_path, "r") as setting:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'config/bridge.yml'
+======================================================================
+End    : 2026-05-14 19:12:23.733781
+Exit   : 1
